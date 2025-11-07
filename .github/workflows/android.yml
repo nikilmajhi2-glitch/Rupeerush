@@ -1,4 +1,4 @@
-name: Build Android APK (Capacitor)
+name: Build Android APK (Capacitor v5)
 
 on:
   push:
@@ -44,10 +44,10 @@ jobs:
         run: yes | ${ANDROID_SDK_ROOT}/cmdline-tools/latest/bin/sdkmanager --licenses || true
 
       - name: Install Capacitor CLI
-        run: npm install -g @capacitor/cli
+        run: npm install -g @capacitor/cli@5.7.8
 
-      - name: Install Capacitor Android package
-        run: npm install @capacitor/android
+      - name: Install Capacitor Android package (v5)
+        run: npm install @capacitor/android@5.7.8
 
       - name: Add Android platform (if missing)
         run: |
